@@ -1,4 +1,4 @@
-package builder;
+package vertex_patterns_lesson1.builder;
 
 /**
  * Created by vertex0007 on 21.01.2017.

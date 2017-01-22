@@ -1,4 +1,4 @@
-package wraper;
+package vertex_patterns_lesson1.wraper;
 
 
 
