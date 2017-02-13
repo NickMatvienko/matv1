@@ -1,4 +1,4 @@
-package figures_patterns;
+package patterns.figures_patterns;
 
 /**
  * Final class for creating immutable objects - points.

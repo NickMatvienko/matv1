@@ -1,4 +1,4 @@
-package figures_patterns;
+package patterns.figures_patterns;
 
 /**
  *   Produces instances "under the key" calling Builder for instantiation.

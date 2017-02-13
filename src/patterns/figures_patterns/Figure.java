@@ -1,6 +1,4 @@
-package figures_patterns;
-
-import java.awt.*;
+package patterns.figures_patterns;
 
 /**
  * Main interface for all shapes

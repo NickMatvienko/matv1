@@ -1,4 +1,4 @@
-package figures_patterns;
+package patterns.figures_patterns;
 
 /**
  * Decorator-pattern realisation. Made for code reduce,

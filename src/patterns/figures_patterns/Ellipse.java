@@ -1,6 +1,4 @@
-package figures_patterns;
-
-import java.util.Random;
+package patterns.figures_patterns;
 
 /**
  * Decorates Circle
