@@ -1,6 +1,9 @@
 package patterns.sierra_bates_patterns.observer.weather_station;
 
 
+import patterns.sierra_bates_patterns.observer.weather_station.observer_interfaces.Observer;
+import patterns.sierra_bates_patterns.observer.weather_station.observer_interfaces.Subject;
+
 import java.util.ArrayList;
 
 /**
@@ -35,4 +38,17 @@ public class WeatherData implements Subject {
             observer.update(temp, humidity, pressure);
         }
     }
+
+    public void measurementsChanged() {
+        notifyObservers();
+    }
+
+    public void setMeasurements(float temp, float humidity, float pressure) {
+        this.temp=temp;
+        this.humidity=humidity;
+        this.pressure=pressure;
+        measurementsChanged();
+    }
+
+    //other WeatherData here
 }
