@@ -5,8 +5,8 @@ package patterns.sierra_bates_patterns.singleton;
  */
 public class ChocolateBoiler {
     private boolean empty;
-    private  boolean boiled;
-    private static ChocolateBoiler instance;
+    private boolean boiled;
+    private static volatile ChocolateBoiler instance;
 
     private ChocolateBoiler() {
         empty = true;
@@ -14,24 +14,27 @@ public class ChocolateBoiler {
     }
 
     public static ChocolateBoiler getInstance() {
-        if(instance==null){
-            return new ChocolateBoiler();
+        if (instance == null) {
+            synchronized (ChocolateBoiler.class) {
+                if (instance == null) {
+                    return new ChocolateBoiler();
+                }
+            }
         }
         return instance;
     }
 
     public void fill() {
-        if(isEmpty()){
-            empty=false;
-            boiled =false;
+        if (isEmpty()) {
+            empty = false;
+            boiled = false;
         }
     }
 
 
-
     public void boil() {
-        if(!isEmpty()&&!isBoiled()) {
-            boiled =true;
+        if (!isEmpty() && !isBoiled()) {
+            boiled = true;
         }
     }
 
