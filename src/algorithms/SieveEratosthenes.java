@@ -11,7 +11,8 @@ import java.util.BitSet;
 public class SieveEratosthenes {
     public static void main(String[] args) {
         int n = 2000000;
-        System.out.println(7%(-5));
+        System.out.println((-7)%(5));
+        System.out.println((7)%(-5));
 
         long start = System.currentTimeMillis();
         BitSet b = new BitSet(n + 1);

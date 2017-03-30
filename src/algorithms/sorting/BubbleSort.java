@@ -1,10 +1,14 @@
-package algorithms;
+package algorithms.sorting;
+
+import java.util.Arrays;
 
 /**
  * Created on 22.02.17.
  */
 public class BubbleSort {
-    public int[] getSotedArray(int [] array) {
+
+
+    public static int[] getSotedArray(int [] array) {
         int temp;
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = i; j < array.length - 1; j++) {
