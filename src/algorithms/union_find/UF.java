@@ -1,8 +1,7 @@
 package algorithms.union_find;
 
 
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -96,11 +95,13 @@ public class UF {
     public static void main(String[] args) {
 
      //     startInputManually();
+        long currTime = System.currentTimeMillis();
        Path path = Paths.get("largeUF.txt");
         try (BufferedReader reader = Files.newBufferedReader(path)) {
             String currentLine;
             int n =  Integer.parseInt(reader.readLine());
             UF uf = new UF(n);
+          //  WeightedQuickUnionUF w = new WeightedQuickUnionUF(n);
             while ((currentLine = reader.readLine()) != null) {
                 String [] split = currentLine.split(" ");
                 int p = Integer.parseInt(split[0]);
@@ -111,6 +112,8 @@ public class UF {
                 }
             }
             StdOut.println(uf.count() + " components");
+            long currtime2 = System.currentTimeMillis() - currTime;
+            System.out.println(currtime2);
         }
 catch (IOException ex) {
             ex.printStackTrace();
